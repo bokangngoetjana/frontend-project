@@ -52,7 +52,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
     const register = async (name: string, email: string, password: string) => {
         dispatch(actions.registerPending());
         try{
-            const response = await API.post('/users', {name, email, password});
+            const avatar = `https://api.dicebear.com/6.x/initials/svg?seed=${name}`;
+
+            const response = await API.post('/users', {name, email, password, avatar});
             if(response.status === 201){
                 await login(email, password); //auto login?? remove
             } else {
