@@ -11,6 +11,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
     <html lang="en">
       <body>
         <AuthProvider>
+            <h1>Bokang's App</h1>
             {children}
         </AuthProvider>
       </body>

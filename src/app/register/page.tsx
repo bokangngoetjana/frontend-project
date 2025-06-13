@@ -1,7 +1,8 @@
 'use client'
 import React from "react"
-import { ConfigProvider } from "antd";
+import { ConfigProvider } from "antd"
 import RegisterForm from "@/components/auth/registerForm"
+import router from "next/router";
 
 export default function RegisterPage() {
   return (
@@ -15,8 +16,12 @@ export default function RegisterPage() {
       },
     }}>
 <div>
-      <h1>Register Page</h1>
       <RegisterForm />
+      {/* const success = await login(email, password);
+if (success) {
+  router.push("/dashboard")
+} */}
+
     </div>
     </ConfigProvider>
     

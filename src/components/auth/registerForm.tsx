@@ -17,7 +17,7 @@ const RegisterForm = () => {
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: '0 auto', padding: '2rem' }}>
+    <div style={{ maxWidth: 400, margin: '0 auto', padding: '150px 50px', }}>
       <Title level={3}>Register</Title>
 
       <Form form={form} layout="vertical" onFinish={onFinish}>
